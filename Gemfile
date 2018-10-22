@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 group :jekyll_plugins do
+  gem 'jekyll-paginate'
+  gem 'jekyll-sitemap'
+  gem 'octopress-autoprefixer'
   gem "jekyll-feed", "~> 0.6"
 end
 
