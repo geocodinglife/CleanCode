@@ -39,7 +39,7 @@ https://thomasvaeth.github.io/trophy-jekyll/
 
 http://thomasvaeth.com/trophy/
 
-![](app/assets/images/Trophy.PNG)
+![](app/assets/images/trophy.PNG)
 
 * Configuration
 
