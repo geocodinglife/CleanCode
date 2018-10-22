@@ -36,6 +36,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
 end
 
+ gem 'sqlite3'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -68,8 +69,6 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :production do
   gem 'pg'
-end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
