@@ -27,6 +27,20 @@ lib/assets/python/heart.py
 
 ![](app/assets/images/python/ruby-python-diagram.PNG)
 
+# jekyll add it to rails the proccess explain here
+
+https://www.sitepoint.com/jekyll-rails/
+
+https://medium.com/@halfbyte/jekyll-within-rails-on-heroku-b53e9c64502
+
+https://jan.krutisch.de/en/2016/09/24/jekyll-with-rails-on-heroku.html
+
+https://thomasvaeth.github.io/trophy-jekyll/
+
+http://thomasvaeth.com/trophy/
+
+![](app/assets/images/Trophy.PNG)
+
 * Configuration
 
 * Database creation
