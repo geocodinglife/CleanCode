@@ -1,0 +1,20 @@
+<P id="notice"><%= notice %>
+
+<p>
+<strong>Title:</strong>
+  <%= @note.title %>
+</p>
+
+<p>
+<strong>Text:</strong>
+  <%= @note.text%>
+</p>
+
+<p>
+<strong>Published:</strong>
+  <%= @note.published %>
+</p>
+
+<%= link_to "edit", edit_note_path(@note) %> |
+<%= link_to "back", notes_path %>
+
