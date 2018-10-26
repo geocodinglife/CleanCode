@@ -79,22 +79,39 @@ class MicroBloger
     end
   end
 
+  class NoActionCommand
+    def match?(input)
+      true
+    end
+
+    def execute
+    end
+  end
+
   def process(input)
     quit = QuitCommand.new
     tweet = TweetCommand.new
     direct_message = DirectMessageCommand.new
     help = HelpCommand.new
+###############################################
+# this line is need it becouse if no action found
+# it will return nil to aboid that I create the
+# NoActionCommand class, is important to add it to the end
+# so the action is not get clouded with the otherones
+    no_action = NoActionCommand.new
 
-
-    if quit.match?(input)
-      quit.execute
-    elsif tweet.match?(input)
-      tweet.execute
-    elsif direct_message.match?(input)
-      direct_message.execute
-    elsif help.match?(input)
-      help.execute
-    end
+   commands = [quit, tweet, direct_message, help, no_action]
+   found_command =commands.find {|command| command.match?(input) }
+   found_command.execute
+  #   if quit.match?(input)
+  #     quit.execute
+  #   elsif tweet.match?(input)
+  #     tweet.execute
+  #   elsif direct_message.match?(input)
+  #     direct_message.execute
+  #   elsif help.match?(input)
+  #     help.execute
+  #   end
   end
 end
 
