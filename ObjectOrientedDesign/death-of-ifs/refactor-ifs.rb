@@ -88,8 +88,8 @@ class MicroBloger
     end
   end
 
-  def process(input)
-    quit = QuitCommand.new
+  def commands
+  quit = QuitCommand.new
     tweet = TweetCommand.new
     direct_message = DirectMessageCommand.new
     help = HelpCommand.new
@@ -100,9 +100,15 @@ class MicroBloger
 # so the action is not get clouded with the otherones
     no_action = NoActionCommand.new
 
-   commands = [quit, tweet, direct_message, help, no_action]
+     commands = [quit, tweet, direct_message, help, no_action]
+  end
+
+  def command_for_input(input)
    found_command =commands.find {|command| command.match?(input) }
-   found_command.execute
+  end
+
+  def process(input)
+   command_for_input(input).execute
   #   if quit.match?(input)
   #     quit.execute
   #   elsif tweet.match?(input)
